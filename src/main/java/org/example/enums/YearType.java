@@ -1,7 +1,7 @@
 package org.example.enums;
 
 public enum YearType {
-    ONE( 0, 365),
+    ONE(0, 365),
     TWO(1, 365),
     THREE(2, 365),
     FOUR(3, 366);
