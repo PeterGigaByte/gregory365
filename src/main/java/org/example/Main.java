@@ -6,12 +6,10 @@ import org.example.enums.YearType;
 public class Main {
     public static void main(String[] args) {
         // Init params
-        int years = 2000 - 1901;
-        years = 1;
+        int years = 100;
         Day dayToCount = Day.SUNDAY;
-        Day startingDay = Day.MONDAY;
-        YearType startingYearType = YearType.TWO; // 1901
-        startingYearType = YearType.ONE;
+        Day startingDay = Day.TUESDAY;
+        YearType startingYearType = YearType.ONE; // 1901
         // Print result
         System.out.printf(
                 "For (%s) with starting day (%s) and day type to count (%s) and starting year type (%s) is result: ('%s') .",
@@ -28,7 +26,6 @@ public class Main {
         YearType currentYear = startingYearType;
         Day currentDay = startingDay;
         while (yearsToCount != 0) {
-
             int daysInYear =  currentYear.getDays();
             while (daysInYear != 0) {
                 if (dayToCount == currentDay) {
@@ -37,7 +34,6 @@ public class Main {
                 currentDay = currentDay.getNextDay();
                 daysInYear--;
             }
-
             yearsToCount--;
             currentYear = currentYear.incrementYear();
             currentDay = currentDay.getNextDay();

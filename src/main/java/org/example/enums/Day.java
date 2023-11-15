@@ -13,28 +13,14 @@ public enum Day {
     }
 
     public Day getNextDay() {
-        switch (this) {
-            case MONDAY -> {
-                return TUESDAY;
-            }
-            case TUESDAY -> {
-                return WEDNESDAY;
-            }
-            case WEDNESDAY -> {
-                return THURSDAY;
-            }
-            case THURSDAY -> {
-                return FRIDAY;
-            }
-            case FRIDAY -> {
-                return SATURDAY;
-            }
-            case SATURDAY -> {
-                return SUNDAY;
-            }
-            case default -> {
-                return MONDAY;
-            }
-        }
+        return switch (this) {
+            case MONDAY -> TUESDAY;
+            case TUESDAY -> WEDNESDAY;
+            case WEDNESDAY -> THURSDAY;
+            case THURSDAY -> FRIDAY;
+            case FRIDAY -> SATURDAY;
+            case SATURDAY -> SUNDAY;
+            default -> MONDAY;
+        };
     }
 }
