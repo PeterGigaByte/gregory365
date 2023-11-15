@@ -26,20 +26,21 @@ public class Main {
     public static int getDaysCountForPeriod(int yearsToCount, Day dayToCount, Day startingDay, YearType startingYearType) {
         int result = 0;
         YearType currentYear = startingYearType;
+        Day currentDay = startingDay;
         while (yearsToCount != 0) {
 
             int daysInYear =  currentYear.getDays();
             while (daysInYear != 0) {
-                if (dayToCount == startingDay) {
+                if (dayToCount == currentDay) {
                     result++;
                 }
-                startingDay = startingDay.getNextDay();
+                currentDay = currentDay.getNextDay();
                 daysInYear--;
             }
 
             yearsToCount--;
             currentYear = currentYear.incrementYear();
-            startingDay = startingDay.getNextDay();
+            currentDay = currentDay.getNextDay();
         }
         return result;
     }
