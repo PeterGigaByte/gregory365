@@ -25,6 +25,7 @@ public class Main {
         int result = 0;
         YearType currentYear = startingYearType;
         Day currentDay = startingDay;
+
         while (yearsToCount != 0) {
             int daysInYear =  currentYear.getDays();
             while (daysInYear != 0) {
